@@ -2,14 +2,23 @@ import React from 'react';
 import styles from "./Card.module.css"
 
 type CardProps = {
-    title?: string;
-    content: string;
+    id?: number;
+    name: string;
+    email?: string
 }
-const Card: React.FC<CardProps> = ({ title="Default title", content="Default content" }) => {
+
+type users = {
+    id: number;
+    name: string;
+    email: string;
+  }
+
+const Card: React.FC<CardProps> = ({ id=1, name="Belem", email }) => {
     return (
-        <div>
-            <h1 className={styles.title}> {title}</h1>
-            <p className={styles.content}>{content}</p>
+        <div className={styles.card}>
+            <p className={styles.paragraph}> {id}</p>
+            <p className={styles.paragraph}>{name}</p>
+            <p className={styles.paragraph}>{email}</p>
         </div>
     );
 };

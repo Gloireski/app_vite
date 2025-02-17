@@ -8,12 +8,26 @@ import Footer from './components/Footer'
 
 function App() {
   // const [count, setCount] = useState(0)
-
+  const users = [
+    {
+      id: 1,
+      name: 'John Doe',
+      email: ''
+    },
+    {
+      id: 2,
+      name: 'Gloire Belem',
+      email: 'belem.b19@yahoo.com'
+    }
+  ]
   return (
     <>
       <Header />
-      <Card />
-      <Card title="Bonjour" content="Bienvenue à notre cours de MERN Stack" />
+      { users.map((user) => (
+        <Card key={user.id} {...user} /> 
+      )) 
+      }
+      {/* <Card id={783} name="Gloire Bekoutou Belem" /> */}
       <Footer />
     </>
   )
