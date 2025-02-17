@@ -7,11 +7,11 @@ type CardProps = {
     email?: string
 }
 
-type users = {
-    id: number;
-    name: string;
-    email: string;
-  }
+// type users = {
+//     id: number;
+//     name: string;
+//     email: string;
+//   }
 
 const Card: React.FC<CardProps> = ({ id=1, name="Belem", email }) => {
     return (
