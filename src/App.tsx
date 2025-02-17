@@ -12,6 +12,7 @@ function App() {
   return (
     <>
       <Header />
+      <Card />
       <Card title="Bonjour" content="Bienvenue à notre cours de MERN Stack" />
       <Footer />
     </>
